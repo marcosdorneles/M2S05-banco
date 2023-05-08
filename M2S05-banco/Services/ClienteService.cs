@@ -1,9 +1,10 @@
 ﻿using System;
+using M2S05_banco.Interface;
 using M2S05_banco.Models;
 
 namespace M2S05_banco.Services
 {
-	public class ClienteService
+	public class ClienteService : IClienteService
 	{
         private static List<Cliente> _clientes = new List<Cliente>();
 
@@ -67,19 +68,19 @@ namespace M2S05_banco.Services
             _clientes.Add(clientePF);
         }
 
-        //private void CriarContaPessoaJuridica()
-        //{
-        //    var clientePj = new PessoaJuridica();
-        //    Console.WriteLine("Digite o CNPJ");
-        //    clientePj.CNPJ = Console.ReadLine();
-        //    Console.WriteLine("Digite o Razão Social");
-        //    clientePj.RazaoSocial = Console.ReadLine();
-        //    Console.WriteLine("Digite o Inscrição Estadual");
-        //    clientePj.InscricaoEstadual = Console.ReadLine();
+        private void CriarContaPessoaJuridica()
+        {
+            var clientePj = new PessoaJuridica();
+            Console.WriteLine("Digite o CNPJ");
+            clientePj.CNPJ = Console.ReadLine();
+            Console.WriteLine("Digite o Razão Social");
+            clientePj.RazaoSocial = Console.ReadLine();
+            Console.WriteLine("Digite o Inscrição Estadual");
+            clientePj.InscricaoEstadual = Console.ReadLine();
 
-        //    clientePj = (PessoaJuridica)PreencheClientePai(clientePj);
-        //    _clientes.Add(clientePj);
-        //}
+            clientePj = (PessoaJuridica)PreencheClientePai(clientePj);
+            _clientes.Add(clientePj);
+        }
         private Cliente PreencheClientePai(Cliente cliente)
         {
             Console.WriteLine("Digite o Numero da conta ");
