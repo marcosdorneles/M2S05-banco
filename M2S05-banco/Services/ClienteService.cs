@@ -25,7 +25,7 @@ namespace M2S05_banco.Services
             }
             else if (opcao == "2")
             {
-                CriarContaPessoaJuridica();
+                //CriarContaPessoaJuridica();
             }
             else
             {
@@ -67,7 +67,19 @@ namespace M2S05_banco.Services
             _clientes.Add(clientePF);
         }
 
-     
+        //private void CriarContaPessoaJuridica()
+        //{
+        //    var clientePj = new PessoaJuridica();
+        //    Console.WriteLine("Digite o CNPJ");
+        //    clientePj.CNPJ = Console.ReadLine();
+        //    Console.WriteLine("Digite o Razão Social");
+        //    clientePj.RazaoSocial = Console.ReadLine();
+        //    Console.WriteLine("Digite o Inscrição Estadual");
+        //    clientePj.InscricaoEstadual = Console.ReadLine();
+
+        //    clientePj = (PessoaJuridica)PreencheClientePai(clientePj);
+        //    _clientes.Add(clientePj);
+        //}
         private Cliente PreencheClientePai(Cliente cliente)
         {
             Console.WriteLine("Digite o Numero da conta ");

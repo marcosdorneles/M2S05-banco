@@ -17,6 +17,10 @@ namespace M2S05_banco.Models
             DataNascimento = dataNascimento;
         }
 
+        public PessoaFisica()
+        {
+        }
+
         public bool maiorIdade()
         {
             var idade = DateTime.Now.Year - DataNascimento.Year;
